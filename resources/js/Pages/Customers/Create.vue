@@ -37,6 +37,7 @@ const storeCustomer = () => {
 <template>
     <Head title="顧客登録" />
 
+    <!-- <ValidationErrors :errors="form.errors" /> -->
     <AuthenticatedLayout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -54,10 +55,6 @@ const storeCustomer = () => {
                                 <div class="container px-5 py-8 mx-auto">
                                     <div class="lg:w-1/2 md:w-2/3 mx-auto">
                                         <div class="flex flex-wrap -m-2">
-                                            <!-- <InputError
-                                                class="mt-2"
-                                                :message="errors.name"
-                                            /> -->
                                             <div class="p-2 w-full">
                                                 <div class="relative">
                                                     <label
@@ -233,10 +230,6 @@ const storeCustomer = () => {
                                                 </div>
                                             </div>
 
-                                            <!-- <InputError
-                                                class="mt-2"
-                                                :message="errors.memo"
-                                            /> -->
                                             <div class="p-2 w-full">
                                                 <div class="relative">
                                                     <label

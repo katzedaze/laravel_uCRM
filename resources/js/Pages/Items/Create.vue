@@ -1,5 +1,4 @@
 <script setup>
-import InputError from "@/Components/InputError.vue";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import { Inertia } from "@inertiajs/inertia";
 import { Head } from "@inertiajs/vue3";
@@ -23,6 +22,7 @@ const storeItem = () => {
 <template>
     <Head title="商品登録" />
 
+    <!-- <ValidationErrors :errors="form.errors" /> -->
     <AuthenticatedLayout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -40,10 +40,6 @@ const storeItem = () => {
                                 <div class="container px-5 py-8 mx-auto">
                                     <div class="lg:w-1/2 md:w-2/3 mx-auto">
                                         <div class="flex flex-wrap -m-2">
-                                            <InputError
-                                                class="mt-2"
-                                                :message="errors.name"
-                                            />
                                             <div class="p-2 w-full">
                                                 <div class="relative">
                                                     <label
@@ -62,10 +58,6 @@ const storeItem = () => {
                                                 </div>
                                             </div>
 
-                                            <InputError
-                                                class="mt-2"
-                                                :message="errors.memo"
-                                            />
                                             <div class="p-2 w-full">
                                                 <div class="relative">
                                                     <label
@@ -82,10 +74,6 @@ const storeItem = () => {
                                                 </div>
                                             </div>
 
-                                            <InputError
-                                                class="mt-2"
-                                                :message="errors.price"
-                                            />
                                             <div class="p-2 w-full">
                                                 <div class="relative">
                                                     <label
